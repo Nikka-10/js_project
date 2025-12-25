@@ -59,6 +59,20 @@ prev.addEventListener("click", () => {
   resetAuto();
 });
 
+const catalogBtn = document.getElementById("catalogBtn");
+const catalogMenu = document.getElementById("catalogMenu");
+
+catalogBtn.addEventListener("click", () => {
+  catalogMenu.style.display = catalogMenu.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", (e) => {
+  if (!catalogBtn.contains(e.target) && !catalogMenu.contains(e.target)) {
+    catalogMenu.style.display = "none";
+  }
+});
+
+
 
 let langData = {};
 
