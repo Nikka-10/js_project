@@ -62,17 +62,19 @@ prev.addEventListener("click", () => {
 const catalogBtn = document.getElementById("catalogBtn");
 const catalogMenu = document.getElementById("catalogMenu");
 
-catalogBtn.addEventListener("click", () => {
-  catalogMenu.style.display = catalogMenu.style.display === "flex" ? "none" : "flex";
+catalogBtn.addEventListener("click", function() {
+  if (catalogMenu.style.display === "flex") {
+    catalogMenu.style.display = "none";
+  } else {
+    catalogMenu.style.display = "flex";
+  }
 });
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", function(e) {
   if (!catalogBtn.contains(e.target) && !catalogMenu.contains(e.target)) {
     catalogMenu.style.display = "none";
   }
 });
-
-
 
 let langData = {};
 
@@ -80,8 +82,26 @@ fetch("lang.json")
     .then(response => response.json())
     .then(data => {
         langData = data;
-        changeLang("ge"); 
+
+        const savedLang = getCookie("siteLang") || "ge";
+        changeLang(savedLang);
     });
+
+function setCookie(name, value, days) {
+  document.cookie = `${name}=${value}; max-age=${days*24*60*60}; path=/`;
+}
+
+function getCookie(name) {
+  return document.cookie
+    .split("; ")
+    .find(row => row.startsWith(name + "="))
+    ?.split("=")[1];
+}
+
+function setLang(lang) {
+  changeLang(lang);
+  setCookie("siteLang", lang, 7);
+}
 
 function changeLang(lang) {
     document.getElementById("base_info_1").textContent = langData[lang].base_info_1
@@ -105,6 +125,7 @@ function changeLang(lang) {
     document.getElementById("type4").textContent = langData[lang].type4;
     document.getElementById("type5").textContent = langData[lang].type5;
 }
+
 
 
 startAuto();
