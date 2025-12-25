@@ -1,0 +1,49 @@
+{
+  "ge": {
+    "base_info_1": "ვმუშაობთ ყოველდღე 11-დან 8 საათამდე",
+    "base_info_2": "რაღაც მისამართი რაღაც ქუჩა რაღაც ნომერი",
+    "base_info_3": "მოქმედებს მიწოდების სერვისი მთელი საქართველოს მასშტაბით",
+
+    "main": "მთავარი",
+    "signup": "ავტორიზაცია",
+    "signin": "რეგისტრაცია",
+    "info": "ძირითადი ინფორმაცია",
+    "contact": "კონტაქტი",
+    "services": "სერვისები",
+    "config": "კონფიგურატორი",
+
+    "catalog": "პროდუქციის კატალოგი",
+    "search": "ძებნა...",
+
+    "type1": "AMD Ryzen სისტემები",
+    "type2": "i5 სისტემები",
+    "type3": "i7 სისტემები",
+    "type4": "i9 სისტემები",
+    "type5": "Ultra 5 სისტემები"
+  },
+
+  "en": {
+    "base_info_1": "We work every day from 11 AM to 8 PM",
+    "base_info_2": "some address some number",
+    "base_info_3": "we work in whole georgia",
+
+    "main": "Home",
+    "signup": "Sign In",
+    "signin": "Sign Up",
+    "info": "Main Information",
+    "contact": "Contact",
+    "services": "Services",
+    "config": "Configurator",
+
+    "catalog": "Product Catalog",
+    "search": "Search...",
+
+    "type1": "AMD Ryzen Systems",
+    "type2": "i5 Systems",
+    "type3": "i7 Systems",
+    "type4": "i9 Systems",
+    "type5": "Ultra 5 Systems"
+  }
+}
+
+

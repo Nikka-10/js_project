@@ -13,21 +13,26 @@
     <div class="container top-bar-content">
         
         <div class="left">
-            <p>ვმუშაობთ ყოველდღე 11-დან 8 საათამდე</p>
-             
+
+            <p id="base_info_1">ვმუშაობთ ყოველდღე 11-დან 8 საათამდე</p>
+            
             <p>591-84-44-48 | 2-12-13-30</p>
-               
+            
             <p>info@itw.ge</p>
-                
+            
         </div>
-
-
+        
         <div class="center">
-            რაღაც მისამართი რაღაც ქუჩა რაღაც ნომერი
+            <p id="base_info_2">რაღაც მისამართი რაღაც ქუჩა რაღაც ნომერი</p>
+        </div>
+        
+        <div class="right">
+            <p id="base_info_3">მოქმედებს მიწოდების სერვისი მთელი საქართველოს მასშტაბით</p>
         </div>
 
-        <div class="right">
-             მოქმედებს მიწოდების სერვისი მთელი საქართველოს მასშტაბით
+        <div class="lang-switch">
+            <button onclick="changeLang('ge')">GE</button>
+            <button onclick="changeLang('en')">EN</button>
         </div>
     </div>
 </div>
@@ -37,26 +42,28 @@
     <div class="logo">ITWORKS</div>
 
     <nav class="nav">
-        <a href="#">მთავარი</a>
-        <a href="sign_in.html">ავოტორიზაცია</a>
-        <a href="sign_up.html">რეგისტრაცია</a>
-        <a href="#">ძირითადი ინფორმაცია</a>
-        <a href="#">კონტაქტი</a>
-        <a href="#">სერვისები</a>
-        <a href="#">კონფიგურატორი</a>
+
+        <a href="#" id="main">მთავარი</a>
+        <a href="sign_in.html" id="signup">ავტორიზაცია</a>
+        <a href="sign_up.html" id="signin">რეგისტრაცია</a>
+        <a href="#" id="info">ძირითადი ინფორმაცია</a>
+        <a href="#" id="contact">კონტაქტი</a>
+        <a href="#" id="services">სერვისები</a>
+        <a href="#" id="config">კონფიგურატორი</a>
+
     </nav>
 </header>
 
 
 <div class="top-row">
     <div class="catalog">
-        <img src="js_project\icons\menu.png" alt="-">
-        <p>პროდუქციის კატალოგი</p>
+        <img src="icons\menu.png" alt="-">
+        <p id="catalog">პროდუქციის კატალოგი</p>
     </div>
 
     <section class="search">
-        <input type="text" placeholder="ძებნა...">
-        <button><img src="js_project\icons\search-interface-symbol.png" alt="-"></button>
+        <input id="search" type="text" placeholder="ძებნა...">
+        <button><img src="icons\search-interface-symbol.png" alt="-"></button>
     </section>
 </div>
 
@@ -80,11 +87,11 @@
 
 <div class="types">
     
-    <p>AMD Ryzen სისტემები</p>
-    <p>i5 სისტემები</p>
-    <p>i7 სისტემები</p>
-    <p>i9 სისტემები</p>
-    <p>Ultra 5 სისტემები</p>
+  <p id="type1">AMD Ryzen სისტემები</p>
+  <p id="type2">i5 სისტემები</p>
+  <p id="type3">i7 სისტემები</p>
+  <p id="type4">i9 სისტემები</p>
+  <p id="type5">Ultra 5 სისტემები</p>
 
 </div>
 

@@ -41,7 +41,7 @@ function prevSlide() {
 }
 
 function startAuto() {
-  timer = setInterval(nextSlide, 5000);
+  timer = setInterval(nextSlide, 4000);
 }
 
 function resetAuto() {
@@ -58,6 +58,40 @@ prev.addEventListener("click", () => {
   prevSlide();
   resetAuto();
 });
+
+
+let langData = {};
+
+fetch("lang.json")
+    .then(response => response.json())
+    .then(data => {
+        langData = data;
+        changeLang("ge"); 
+    });
+
+function changeLang(lang) {
+    document.getElementById("base_info_1").textContent = langData[lang].base_info_1
+    document.getElementById("base_info_2").textContent = langData[lang].base_info_2
+    document.getElementById("base_info_3").textContent = langData[lang].base_info_3
+
+    document.getElementById("main").textContent = langData[lang].main
+    document.getElementById("signup").textContent = langData[lang].signup;
+    document.getElementById("signin").textContent = langData[lang].signin;
+    document.getElementById("info").textContent = langData[lang].info;
+    document.getElementById("contact").textContent = langData[lang].contact;
+    document.getElementById("services").textContent = langData[lang].services;
+    document.getElementById("config").textContent = langData[lang].config;
+
+    document.getElementById("catalog").textContent = langData[lang].catalog;
+    document.getElementById("search").placeholder = langData[lang].search;
+
+    document.getElementById("type1").textContent = langData[lang].type1;
+    document.getElementById("type2").textContent = langData[lang].type2;
+    document.getElementById("type3").textContent = langData[lang].type3;
+    document.getElementById("type4").textContent = langData[lang].type4;
+    document.getElementById("type5").textContent = langData[lang].type5;
+}
+
 
 startAuto();
 

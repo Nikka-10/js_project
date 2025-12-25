@@ -80,6 +80,7 @@
     width: 800px;
     height: 40px;
     border: 1px solid #ccc;
+    padding: 8px;
 }
 
 .search button {
@@ -103,7 +104,8 @@
 
 .types p:hover{
     background-color: gray;
-    padding:10px ;
+    padding:10px;
+    cursor: pointer;
 }
 
 
